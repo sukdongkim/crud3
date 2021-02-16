@@ -2,13 +2,14 @@ package phone.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import phone.Main;
 
 public class MainItemController {
 	@FXML
-	AnchorPane root;
+	Parent root;
     @FXML
     void onClickCafe(MouseEvent event) {
 		try {
@@ -58,4 +59,15 @@ public class MainItemController {
 			e.printStackTrace();
 		}
     }
+    
+    @FXML
+    void onClickEmployee(MouseEvent event) {
+		try {
+			root = FXMLLoader.load(getClass().getResource("../view/EmployeeMain.fxml"));
+			Main.mainLayout.setCenter(root);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+    }
+    
 }

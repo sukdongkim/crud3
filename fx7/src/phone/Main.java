@@ -52,15 +52,7 @@ public class Main extends Application {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}			
-	}
-		
-	public void stopMainView() {
-		primaryStage.close();
-	}
-	
-	public static void stopstageView() {
-		stage.close();
-	}
+	}		
 
 	public static void showCheckView() throws IOException {
 		FXMLLoader loader = new FXMLLoader();
@@ -105,21 +97,29 @@ public class Main extends Application {
 		stage.setScene(scene);
 		stage.showAndWait();
 
-	}
+	}	
 	
-	public static void showCheckStage() throws IOException {
+	public static void showEmployeeAddStage() throws IOException {
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Main.class.getResource("view/BusCheck.fxml"));
-		AnchorPane checkView = loader.load();
-
-		stage = new Stage();
-		stage.setTitle("Check Seat");
+		loader.setLocation(Main.class.getResource("view/AddNewEmployee.fxml"));
+		BorderPane addNewEmployee = loader.load();
+		
+		Stage stage = new Stage();
+		stage.setTitle("Add New Employee");
 		stage.initModality(Modality.WINDOW_MODAL);
 		stage.initOwner(primaryStage);
-		Scene scene = new Scene(checkView);
+		Scene scene = new Scene(addNewEmployee);
 		stage.setScene(scene);
 		stage.showAndWait();
-
+	
+	}
+	
+	public void stopMainView() {
+		primaryStage.close();
+	}
+	
+	public static void stopstageView() {
+		stage.close();
 	}
 	
 	public static void main(String[] args) {

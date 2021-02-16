@@ -204,11 +204,10 @@ public class BusController {
     
     @FXML
     void onClickCheck(ActionEvent event) {
-    	try {
-    		main.stopMainView();
-			main.showCheckStage();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		try {
+			root = FXMLLoader.load(getClass().getResource("../view/BusCheck.fxml"));
+			Main.mainLayout.setCenter(root);
+		} catch(Exception e) {
 			e.printStackTrace();
 		}
     }

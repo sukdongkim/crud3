@@ -47,9 +47,7 @@ public class BusCheckController {
 	@FXML
 	private TableColumn<users, String> col_date;
 	@FXML
-	void onClickHome(ActionEvent event) throws IOException {
-		Main.stopstageView();
-		main.showMainView();
+	void onClickBack(ActionEvent event) throws IOException {
 		try {
 			AnchorPane root = FXMLLoader.load(getClass().getResource("../view/BusMain.fxml"));
 			Main.mainLayout.setCenter(root);

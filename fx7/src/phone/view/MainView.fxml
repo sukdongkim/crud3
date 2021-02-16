@@ -36,6 +36,7 @@
                   <MenuItem mnemonicParsing="false" onAction="#onClickBus" text="BusStop" />
                   <MenuItem mnemonicParsing="false" onAction="#onClickPizza" text="Pizza" />
                   <MenuItem mnemonicParsing="false" onAction="#obClickRestaurant" text="Restaurant" />
+                  <MenuItem mnemonicParsing="false" onAction="#onClickHome" text="Home" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
